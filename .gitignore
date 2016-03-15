@@ -2,3 +2,4 @@ docker-jenkins.iml
 docker-jenkins.ipr
 docker-jenkins.iws
 jenkins-slave.iml
+docker-jenkins/jenkins-slave/target
