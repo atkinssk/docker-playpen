@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>jenkins-slave</module>
+        <module>jenkins-master</module>
     </modules>
 
     <build>
