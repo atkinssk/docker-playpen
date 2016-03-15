@@ -24,7 +24,7 @@
                     <resources>
                         <resource>
                             <targetPath>/app</targetPath>
-                            <directory>${project.basedir}/src/main/scripts</directory>
+                            <directory>${project.basedir}/src/main/docker/scripts</directory>
                             <include>*.sh</include>
                         </resource>
                     </resources>
