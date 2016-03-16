@@ -11,5 +11,41 @@
 
     <artifactId>docker-jenkins-master</artifactId>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <configuration>
+                    <imageName>jenkins-master</imageName>
+                    <baseImage>jenkins</baseImage>
+                    <runs>
+                        <run>/usr/local/bin/plugins.sh /usr/share/jenkins/ref/plugins.txt</run>
+                    </runs>
+                    <resources>
+                        <resource>
+                            <targetPath>/usr/share/jenkins/ref/init.groovy.d/</targetPath>
+                            <directory>${project.basedir}/src/main/docker</directory>
+                            <include>*.groovy</include>
+                        </resource>
+                        <resource>
+                            <targetPath>/usr/share/jenkins/ref/</targetPath>
+                            <directory>${project.basedir}/src/main/docker</directory>
+                            <include>plugins.txt</include>
+                        </resource>
+                    </resources>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>build-image</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>build</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

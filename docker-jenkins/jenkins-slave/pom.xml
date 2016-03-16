@@ -18,7 +18,6 @@
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
                 <configuration>
-                    <dockerHost>https://192.168.99.100:2376</dockerHost>
                     <imageName>jenkins-slave</imageName>
                     <baseImage>java:7</baseImage>
                     <resources>
@@ -29,6 +28,15 @@
                         </resource>
                     </resources>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>build-image</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>build</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
