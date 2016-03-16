@@ -33,6 +33,10 @@
                             <directory>${project.basedir}/src/main/docker</directory>
                             <include>plugins.txt</include>
                         </resource>
+                        <resource>
+                            <targetPath>/usr/share/jenkins/ref/jobs/</targetPath>
+                            <directory>${project.basedir}/src/main/docker/jobs</directory>
+                        </resource>
                     </resources>
                 </configuration>
                 <executions>
