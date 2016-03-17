@@ -11,6 +11,7 @@
     <modules>
         <module>jenkins-slave</module>
         <module>jenkins-master</module>
+        <module>jenkins-slave-swarm</module>
     </modules>
 
     <build>
