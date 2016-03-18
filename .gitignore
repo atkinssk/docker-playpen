@@ -6,3 +6,6 @@ docker-jenkins/jenkins-slave/target
 docker-jenkins/jenkins-master/target
 docker-jenkins/jenkins-slave-swarm/target
 jenkins-slave-swarm.iml
+docker-jenkins/jenkins-master/docker-jenkins-master.iml
+docker-jenkins/jenkins-slave-swarm/docker-jenkins-slave-swarm.iml
+docker-jenkins/jenkins-slave/docker-jenkins-slave.iml
